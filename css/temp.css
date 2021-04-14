@@ -13,7 +13,8 @@ h1.title{
 	color: white;
 	font-family: 'Allura';
 	text-transform: uppercase;
-/*	font-size: 38px;
+	font-size: 38px;
+	/*
 	word-spacing: 25px;
     letter-spacing: 5px;*/
    
@@ -99,8 +100,23 @@ p{
 .banner_content h1 span{
 	color: #fff;
 }
+.glow {
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+	animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+	from {
+	  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #2417d8, 0 0 40px #e60073, 0 0 50px #2417d8, 0 0 60px #e60073, 0 0 70px #2417d8;
+	}
+	
+	to {
+	  text-shadow: 0 0 20px #fff, 0 0 30px #2417d8, 0 0 40px #ff4da6, 0 0 50px #2417d8, 0 0 60px #ff4da6, 0 0 70px #2417d8, 0 0 80px #ff4da6;
+	}
 
-
+  }
 .slogan,
 .About,
 .Services,
@@ -128,7 +144,7 @@ p{
 
  .diff_services_item {
 	width: 25%; 
-	margin: 0px 0px 0px 20px;
+	margin: 0px 0px 0px 0px;
 /*	float: left;*/
 }
 
@@ -141,13 +157,13 @@ p{
 
 .diff_services_item img {
 	width: 100%; 
-	border-radius: 50% 50% 50% 50% / 50% 50% 50% 50% ;
+	border-radius: 50px 0px;
 	padding: 15px ; 
 	
 	
 }
 
-.diff_services_item h3 {
+.diff_services_item h3 a{
     color: white;
     
 }
@@ -192,8 +208,9 @@ margin-bottom: 25px auto 25px;*/
 	border: 1px solid  #ccc;
 }
 /* MAP */
-.mapouter{
+.mapouter h1{
 	margin-top: 15px;
+	color: white;
 	background-image: linear-gradient(to right, purple, blue);
 }
 
@@ -232,7 +249,7 @@ margin-bottom: 25px auto 25px;*/
 
 
 .navbar_items_footer :hover{
-    animation: navbar_items_footer  1s ease;
+    animation: navbar_items_footer  1s ease-in-out;
     animation-iteration-count: 1;
 }
 
@@ -264,38 +281,39 @@ margin-bottom: 25px auto 25px;*/
     }
 }
 
+
 @media (max-width: 720px){
 
-	.navbar{
+	.nav{
 		height: auto;
-		flex-direction: column;
+		flex-direction: column; 
 	}
 
-	.logo a{
+	.Logo a{
 		
 		margin-bottom: 12px;
 		font-size: 12px;
 	}
 
 	.navbar_items ul{
-		padding-top: 40px;
-		flex-direction: row;
-		text-align: center;
+		height: 20px;
+		flex-direction: column;
 	}
+		
 
 	/*.navbar_items ul li{
 		
 	}*/
-
 	.banner_image{
-		background: url('../images/download21.jpg') no-repeat ,top center;
+		background: url('../images/702551.jpg') no-repeat ,top center;
 		background-size: cover;
 		width: 100%;
-		height: vh;
+		height: 600px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
+	
 	
 	.banner_content{
 		text-align: center;
@@ -313,24 +331,66 @@ margin-bottom: 25px auto 25px;*/
 		color: #fff;
 	}
 
-
-/* Services */	
-.diff_services_item{
-	width: 100%;
+	
+ 	
+.Services{
+	height: 230px;
 	flex-direction: column;
+	
 }
+
+
 	
  	.blog .About .Contact{
 		flex-direction: column;
 	 }
 	
-
-	.mapouter{
+	 
+	.mapouter iframe{
 		max-height:vh;
-		max-width: auto;
-		padding-right: 80px;
+			max-width: auto;
+	padding-right: 80px;
 		flex-direction: column;
 
 	}
 
+}
+
+[class*="col-"] {
+	flex-direction: column;
+	float: left;
+	padding: 15px;
+  }
+  
+
+@media only screen and (min-width: 600px) {
+	/* For tablets: */
+	.col-s-1 {width: 8.33%;}
+	.col-s-2 {width: 16.66%;}
+	.col-s-3 {width: 25%;}
+	.col-s-4 {width: 33.33%;}
+	.col-s-5 {width: 41.66%;}
+	.col-s-6 {width: 50%;}
+	.col-s-7 {width: 58.33%;}
+	.col-s-8 {width: 66.66%;}
+	.col-s-9 {width: 75%;}
+	.col-s-10 {width: 83.33%;}
+	.col-s-11 {width: 91.66%;}
+	.col-s-12 {width: 100%;}
+  }
+  @media only screen and (min-width: 768px) {
+	/* For desktop: */
+	.col-1 {width: 8.33%;}
+	.col-2 {width: 16.66%;}
+	.col-3 {width: 25%;}
+	.col-4 {width: 33.33%;}
+	.col-5 {width: 41.66%;}
+	.col-6 {width: 50%;}
+	.col-7 {width: 58.33%;}
+	.col-8 {width: 66.66%;}
+	.col-9 {width: 75%;}
+	.col-10 {width: 83.33%;}
+	.col-11 {width: 91.66%;}
+	.col-12 {width: 100%;}
+  }
 }
